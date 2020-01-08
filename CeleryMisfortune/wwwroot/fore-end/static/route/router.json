@@ -1,0 +1,61 @@
+[
+  {
+    "path": "/",
+    "name": "home",
+    "title": "首页",
+    "component": "Main",
+    "meta": {
+      "hideInMenu": false,
+      "icon": "desktop"
+    },
+    "children": [
+      {
+        "path": "/",
+        "name": "index",
+        "title": "个人面板",
+        "component": "index",
+        "meta": {
+          "icon": "desktop"
+        }
+      },
+      {
+        "path": "/main/page",
+        "name": "main-page",
+        "title": "主页",
+        "component": "main/index",
+        "meta": {
+          "icon": "home"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/player",
+    "name": "player",
+    "title": "角色",
+    "component": "Main",
+    "meta": {
+      "icon": "user"
+    },
+    "children": [
+      {
+        "path": "created",
+        "component": "player/created",
+        "name": "menu-manage",
+        "title": "人物创建",
+        "meta": {
+          "icon": "appstore"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/special",
+    "name": "special",
+    "title": "奇遇",
+    "component": "Main",
+    "meta": {
+      "icon": "gift"
+    }
+  }
+]

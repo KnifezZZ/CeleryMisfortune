@@ -1,0 +1,19 @@
+﻿@model CeleryMisfortune.ViewModel.PlayerSpecialVMs.PlayerSpecialVM
+
+<wt:form vm="@Model">
+	<wt:quote>确定要删除这条数据么：</wt:quote>
+<wt:row items-per-row="ItemsPerRowEnum.Two">
+<wt:display field="Entity.FK_PlayerGuId" />
+<wt:display field="Entity.Strength" />
+<wt:display field="Entity.Perception" />
+<wt:display field="Entity.Endurance" />
+<wt:display field="Entity.Charisma" />
+<wt:display field="Entity.Intelligence" />
+<wt:display field="Entity.Luck" />
+</wt:row>
+    <wt:hidden field="Entity.ID" />
+    <wt:row align=" AlignEnum.Right">
+        <wt:submitbutton theme=" ButtonThemeEnum.Warm" text="删除"/>
+        <wt:closebutton />
+    </wt:row>
+</wt:form>

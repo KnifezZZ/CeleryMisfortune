@@ -1,0 +1,17 @@
+﻿@model CeleryMisfortune.ViewModel.PlayerSpecialVMs.PlayerSpecialVM
+
+<wt:form vm="@Model">
+<wt:row items-per-row="ItemsPerRowEnum.Two">
+<wt:textbox field="Entity.FK_PlayerGuId" />
+<wt:textbox field="Entity.Strength" />
+<wt:textbox field="Entity.Perception" />
+<wt:textbox field="Entity.Endurance" />
+<wt:textbox field="Entity.Charisma" />
+<wt:textbox field="Entity.Intelligence" />
+<wt:textbox field="Entity.Luck" />
+</wt:row>
+    <wt:row align="AlignEnum.Right">
+        <wt:submitbutton />
+        <wt:closebutton />
+    </wt:row>
+</wt:form>

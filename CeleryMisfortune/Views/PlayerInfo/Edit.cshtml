@@ -1,0 +1,16 @@
+﻿@model CeleryMisfortune.ViewModel.PlayerInfoVMs.PlayerInfoVM
+
+<wt:form vm="@Model">
+<wt:row items-per-row="ItemsPerRowEnum.Two">
+<wt:textbox field="Entity.Name" />
+<wt:textbox field="Entity.NickName" />
+<wt:textbox field="Entity.BirthPlace" />
+<wt:textbox field="Entity.Sex" />
+<wt:textbox field="Entity.Sect" />
+</wt:row>
+    <wt:hidden field="Entity.ID" />
+    <wt:row align="AlignEnum.Right">
+        <wt:submitbutton />
+        <wt:closebutton />
+    </wt:row>
+</wt:form>

@@ -1,0 +1,12 @@
+﻿@model CeleryMisfortune.ViewModel.PlayerInfoVMs.PlayerInfoListVM
+
+<wt:searchpanel vm="@Model" reset-btn="true">
+<wt:row items-per-row="ItemsPerRowEnum.Three">
+<wt:textbox field="Searcher.Name" />
+<wt:textbox field="Searcher.NickName" />
+<wt:textbox field="Searcher.BirthPlace" />
+<wt:textbox field="Searcher.Sex" />
+<wt:textbox field="Searcher.Sect" />
+</wt:row>
+</wt:searchpanel>
+<wt:grid vm="@Model" url="/PlayerInfo/Search"/>

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "10301",
+    "detail": {
+      "avatar": "guzhuang_meichangsu",
+      "name": "考生",
+      "description": "赴京赶考的童生",
+      "level": "3",
+      "lock": false
+    }
+  },
+  {
+    "id": "10302",
+    "detail": {
+      "avatar": "guzhuang_dongfangbubai",
+      "name": "偷马贼",
+      "description": "走狗屎运的小贼",
+      "level": "3",
+      "lock": false
+    }
+  },
+  {
+    "id": "10303",
+    "detail": {
+      "avatar": "guzhuang_huawuque",
+      "name": "囚犯",
+      "description": "有点蛮力的武夫",
+      "level": "3",
+      "lock": false
+    }
+  },
+  {
+    "id": "10304",
+    "detail": {
+      "avatar": "guzhuang_lixunhuan",
+      "name": "自定义",
+      "description": "详细设置角色的背景属性",
+      "level": "3",
+      "lock": false
+    }
+  }
+]
