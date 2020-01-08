@@ -8,6 +8,10 @@
     <CopyRefAssembliesToPublishDirectory>true</CopyRefAssembliesToPublishDirectory>
 </PropertyGroup>
 
+  <ItemGroup>
+    <Content Remove="wwwroot\fore-end\package-lock.json" />
+  </ItemGroup>
+
 
 
 
@@ -21,7 +25,7 @@
    <ProjectReference Include="..\CeleryMisfortune.Model\CeleryMisfortune.Model.csproj" />
     <ProjectReference Include="..\CeleryMisfortune.DataAccess\CeleryMisfortune.DataAccess.csproj" />
     <ProjectReference Include="..\CeleryMisfortune.ViewModel\CeleryMisfortune.ViewModel.csproj" />
- </ItemGroup >
+ </ItemGroup>
 </Project>
 
 

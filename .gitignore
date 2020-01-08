@@ -1,6 +1,19 @@
-\bin
-\obj
-\node_modules
-\dist
+/bin/
+/obj/
+/node_modules/
+/dist/
 
 .vs
+/CeleryMisfortune/bin/Debug/netcoreapp3.1
+/CeleryMisfortune/obj
+/CeleryMisfortune/wwwroot/fore-end/dist
+/CeleryMisfortune/wwwroot/fore-end/node_modules
+/CeleryMisfortune.DataAccess/bin/Debug/netcoreapp3.1
+/CeleryMisfortune.DataAccess/obj/Debug/netcoreapp3.1
+/CeleryMisfortune.DataAccess/obj
+/CeleryMisfortune.Model/bin/Debug/netcoreapp3.1
+/CeleryMisfortune.Model/obj
+/CeleryMisfortune.Test/bin/Debug/netcoreapp3.1
+/CeleryMisfortune.ViewModel/bin/Debug/netcoreapp3.1
+/CeleryMisfortune.Test/obj
+/CeleryMisfortune.ViewModel/obj
