@@ -1,0 +1,2 @@
+# CeleryMisfortune
+基于vue+antd的mud游戏，游戏内容参照黑山老鬼小说大劫主，属性依照辐射4的special设定，加上其他设定组成的mud大杂烩
