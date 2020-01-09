@@ -166,8 +166,7 @@
     return true
   }
 
-  // abp.auth.tokenCookieName = 'Abp.AuthToken'
-  abp.auth.tokenCookieName = '.AspNetCore.WTM.CookieWithJwtAuth'
+  abp.auth.tokenCookieName = 'Abp.AuthToken'
   abp.auth.setToken = function (authToken, expireDate) {
     abp.utils.setCookieValue(abp.auth.tokenCookieName, authToken, expireDate, abp.appPath, abp.domain)
   }

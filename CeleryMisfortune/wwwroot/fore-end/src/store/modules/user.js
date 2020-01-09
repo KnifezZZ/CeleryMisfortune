@@ -2,6 +2,7 @@ import { AccountLogin } from '@/api/user'
 import Util from '@/lib/util'
 import appconst from '@/lib/appconst'
 import { initRouter } from '@/utils/router-util'
+import SignalRAspNetCoreHelper from '@/lib/SignalRAspNetCoreHelper'
 export default {
   state: {
     userAccount: '',
@@ -31,21 +32,13 @@ export default {
         AccountLogin(payload).then(res => {
           const data = res.data
           if (res.status === 200) {
-            debugger
             var tokenExpireDate = payload.rememberMe ? (new Date(new Date().getTime() + 1000 * data.expires_in)) : undefined
-            Util.abp.auth.setToken(data.access_token, tokenExpireDate)
-            Util.abp.utils.setCookieValue(appconst.authorization.encrptedAuthTokenName, data.refresh_token, tokenExpireDate, Util.abp.appPath)
+            Util.abp.auth.setToken(data.refresh_token, tokenExpireDate)
+            Util.abp.utils.setCookieValue(appconst.authorization.encrptedAuthTokenName, data.access_token, tokenExpireDate, Util.abp.appPath)
+            SignalRAspNetCoreHelper.initSignalR()
             // 获取菜单路由
             initRouter()
           }
-          // if (this.$config.useAbp) {
-          //   const data = res.data.result // abp
-          //   if (res.data.success) {
-          //     var tokenExpireDate = payload.rememberMe ? (new Date(new Date().getTime() + 1000 * data.expireInSeconds)) : undefined
-          //     Util.abp.auth.setToken(data.accessToken, tokenExpireDate)
-          //     Util.abp.utils.setCookieValue(appconst.authorization.encrptedAuthTokenName, data.encryptedAccessToken, tokenExpireDate, Util.abp.appPath)
-          //   }
-          // }
           resolve(res.data)
         }).catch(err => {
           reject(err)

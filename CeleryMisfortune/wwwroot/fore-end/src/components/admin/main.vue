@@ -94,6 +94,20 @@ export default {
         query
       })
     }
+  },
+
+  mounted () {
+    let vm = this
+    setTimeout(() => {
+      debugger
+      window.abp.signalr.hubs.common.invoke('SendMessage', 'hello').catch(function (err) {
+        return console.error(err.toString())
+      })
+      window.abp.signalr.hubs.common.on('ReceiveMessage', function (message) {
+        var msg = message.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+        vm.$info({ title: msg })
+      })
+    }, 2000)
   }
 }
 </script>

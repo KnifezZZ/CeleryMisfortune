@@ -14,3 +14,11 @@ D:\repos\_The Lab\gitRepos\CeleryMisfortune\KnifeZ.SignalRKit\obj\Debug\netcorea
 D:\repos\_The Lab\gitRepos\CeleryMisfortune\KnifeZ.SignalRKit\bin\Debug\netcoreapp3.1\KnifeZ.SignalRKit.deps.json
 D:\repos\_The Lab\gitRepos\CeleryMisfortune\KnifeZ.SignalRKit\bin\Debug\netcoreapp3.1\KnifeZ.SignalRKit.dll
 D:\repos\_The Lab\gitRepos\CeleryMisfortune\KnifeZ.SignalRKit\bin\Debug\netcoreapp3.1\KnifeZ.SignalRKit.pdb
+E:\GitSource\CeleryMisfortune\KnifeZ.SignalRKit\bin\Debug\netcoreapp3.1\KnifeZ.SignalRKit.deps.json
+E:\GitSource\CeleryMisfortune\KnifeZ.SignalRKit\bin\Debug\netcoreapp3.1\KnifeZ.SignalRKit.dll
+E:\GitSource\CeleryMisfortune\KnifeZ.SignalRKit\bin\Debug\netcoreapp3.1\KnifeZ.SignalRKit.pdb
+E:\GitSource\CeleryMisfortune\KnifeZ.SignalRKit\obj\Debug\netcoreapp3.1\KnifeZ.SignalRKit.csprojAssemblyReference.cache
+E:\GitSource\CeleryMisfortune\KnifeZ.SignalRKit\obj\Debug\netcoreapp3.1\KnifeZ.SignalRKit.AssemblyInfoInputs.cache
+E:\GitSource\CeleryMisfortune\KnifeZ.SignalRKit\obj\Debug\netcoreapp3.1\KnifeZ.SignalRKit.AssemblyInfo.cs
+E:\GitSource\CeleryMisfortune\KnifeZ.SignalRKit\obj\Debug\netcoreapp3.1\KnifeZ.SignalRKit.dll
+E:\GitSource\CeleryMisfortune\KnifeZ.SignalRKit\obj\Debug\netcoreapp3.1\KnifeZ.SignalRKit.pdb

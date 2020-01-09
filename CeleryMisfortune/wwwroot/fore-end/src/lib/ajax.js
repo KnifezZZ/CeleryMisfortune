@@ -11,7 +11,7 @@ ajax.interceptors.request.use(function (config) {
     config.headers.common['Abp.TenantId'] = window.abp.multiTenancy.getTenantIdCookie()
   }
   if (window.abp.auth.getToken()) {
-    config.headers.common['Authorization'] = 'Bearer ' + window.abp.auth.getToken()
+    config.headers.common['Authorization'] = 'Bearer ' + window.abp.utils.getCookieValue(appconst.authorization.encrptedAuthTokenName)
   }
   return config
 }, function (error) {

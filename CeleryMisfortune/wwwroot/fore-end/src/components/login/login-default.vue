@@ -51,10 +51,10 @@
             initialValue: true,
           },
         ]"
-            >Remember me</a-checkbox>
-            <a class="login-form-forgot" href>Forgot password</a>
-            <a-button type="primary" html-type="submit" class="login-form-button">Log in</a-button>Or
-            <a href>register now!</a>
+            >记住我</a-checkbox>
+            <a class="login-form-forgot" href>忘记密码？</a>
+            <a-button type="primary" html-type="submit" class="login-form-button">登录</a-button>
+            <a href>新注册!</a>
           </a-form-item>
         </a-form>
       </div>
@@ -83,12 +83,10 @@ export default {
       this.form.validateFields((err, values) => {
         if (!err) {
           this.handleLogin(values).then(res => {
-            debugger
             this.$router.push({
               name: vm.$config.homePage
             })
           })
-          console.log('Received values of form: ', values)
         }
       })
     }

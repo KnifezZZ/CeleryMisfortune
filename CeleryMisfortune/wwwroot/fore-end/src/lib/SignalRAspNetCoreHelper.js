@@ -8,7 +8,7 @@ class SignalRAspNetCoreHelper {
       connect: undefined,
       hubs: undefined,
       qs: AppConsts.authorization.encrptedAuthTokenName + '=' + encodeURIComponent(encryptedAuthToken),
-      url: AppConsts.remoteServiceBaseUrl + '/signalr'
+      url: AppConsts.remoteServiceBaseUrl + 'signalr'
     }
     Util.loadScript(AppConsts.appBaseUrl + '/static/abp.signalr-client.js')
   }

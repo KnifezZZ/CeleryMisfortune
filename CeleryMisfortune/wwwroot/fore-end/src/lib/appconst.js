@@ -9,8 +9,7 @@ const AppConsts = {
     defaultLocalizationSourceName: 'Kadmin'
   },
   authorization: {
-    // encrptedAuthTokenName: 'enc_auth_token'
-    encrptedAuthTokenName: 'KCM.RefreshToken' // WTM
+    encrptedAuthTokenName: 'enc_auth_token'
   },
   appBaseUrl: 'http://localhost:8080',
   remoteServiceBaseUrl: url

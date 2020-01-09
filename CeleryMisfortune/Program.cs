@@ -79,7 +79,7 @@ namespace CeleryMisfortune
                          x.UseWebSockets();
                          x.UseEndpoints(routes =>
                          {
-                             routes.MapHub<ClientNotifyHub>("/clientNotifyHub");
+                             routes.MapHub<ClientNotifyHub>("/signalr");
                          });
                      });
                  }

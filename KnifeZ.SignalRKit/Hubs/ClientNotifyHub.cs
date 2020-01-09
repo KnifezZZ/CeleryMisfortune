@@ -20,6 +20,18 @@ namespace KnifeZ.SignalRKit.Hubs
                 Context.ConnectionId));
             await base.OnConnectedAsync();
         }
+
+        //发送消息--发送给所有连接的客户端
+        public void Register()
+        {
+
+        }
+        //发送消息--发送给所有连接的客户端
+        public async Task GetNotification(string message)
+        {
+            await Clients.All.SendAsync("getNotification", message);
+        }
+        
         //发送消息--发送给所有连接的客户端
         public async Task SendMessage(string message)
         {
