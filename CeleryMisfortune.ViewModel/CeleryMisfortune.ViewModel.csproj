@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CeleryMisfortune.Model\CeleryMisfortune.Model.csproj" />
-  </ItemGroup >
+    <ProjectReference Include="..\KnifeZ.SignalRKit\KnifeZ.SignalRKit.csproj" />
+  </ItemGroup>
 </Project>
 

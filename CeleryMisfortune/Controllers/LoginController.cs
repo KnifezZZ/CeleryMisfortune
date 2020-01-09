@@ -8,6 +8,7 @@ using WalkingTec.Mvvm.Core;
 using WalkingTec.Mvvm.Core.Extensions;
 using WalkingTec.Mvvm.Mvc;
 using CeleryMisfortune.ViewModel.HomeVMs;
+using System.Security.Claims;
 
 namespace CeleryMisfortune.Controllers
 {
@@ -62,7 +63,6 @@ namespace CeleryMisfortune.Controllers
                         ExpiresUtc = DateTimeOffset.UtcNow.Add(TimeSpan.FromDays(30))
                     };
                 }
-
                 var principal = user.CreatePrincipal();
                 // 在上面注册AddAuthentication时，指定了默认的Scheme，在这里便可以不再指定Scheme。
                 await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal, properties);

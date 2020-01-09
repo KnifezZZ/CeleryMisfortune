@@ -12,6 +12,9 @@ using Swashbuckle.AspNetCore.Swagger;
 using WalkingTec.Mvvm.Core;
 using WalkingTec.Mvvm.Mvc;
 using WalkingTec.Mvvm.TagHelpers.LayUI;
+using KnifeZ.SignalRKit;
+using System;
+using KnifeZ.SignalRKit.Hubs;
 
 namespace CeleryMisfortune
 {
@@ -25,39 +28,41 @@ namespace CeleryMisfortune
 
         public static IHostBuilder CreateWebHostBuilder(string[] args)
         {
-
             return
                 Host.CreateDefaultBuilder(args)
                  .ConfigureWebHostDefaults(webBuilder =>
                  {
                      webBuilder.ConfigureServices(x =>
-                    {
-                        x.AddFrameworkService();
-                        x.AddLayui();
-                        x.AddSwaggerGen(c =>
-                        {
-                            c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
-                            var bearer = new OpenApiSecurityScheme()
-                            {
-                                Description = "JWT Bearer",
-                                Name = "Authorization",
-                                In = ParameterLocation.Header,
-                                Type = SecuritySchemeType.ApiKey
+                     {
+                         x.AddFrameworkService();
+                         x.AddLayui();
+                         x.AddSignalR();
 
-                            };
-                            c.AddSecurityDefinition("Bearer", bearer);
-                            var sr = new OpenApiSecurityRequirement();
-                            sr.Add(new OpenApiSecurityScheme
-                            {
-                                Reference = new OpenApiReference
-                                {
-                                    Type = ReferenceType.SecurityScheme,
-                                    Id = "Bearer"
-                                }
-                            }, new string[] { });
-                            c.AddSecurityRequirement(sr);
-                        });
-                    });
+                         x.AddSwaggerGen(c =>
+                         {
+                             c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
+                             var bearer = new OpenApiSecurityScheme()
+                             {
+                                 Description = "JWT Bearer",
+                                 Name = "Authorization",
+                                 In = ParameterLocation.Header,
+                                 Type = SecuritySchemeType.ApiKey
+
+                             };
+                             c.AddSecurityDefinition("Bearer", bearer);
+                             var sr = new OpenApiSecurityRequirement();
+                             sr.Add(new OpenApiSecurityScheme
+                             {
+                                 Reference = new OpenApiReference
+                                 {
+                                     Type = ReferenceType.SecurityScheme,
+                                     Id = "Bearer"
+                                 }
+                             }, new string[] { });
+                             c.AddSecurityRequirement(sr);
+                         });
+                     });
+
                      webBuilder.Configure(x =>
                      {
                          var configs = x.ApplicationServices.GetRequiredService<Configs>();
@@ -70,6 +75,12 @@ namespace CeleryMisfortune
                              });
                          }
                          x.UseFrameworkService();
+                         //添加WebSocket支持，SignalR优先使用WebSocket传输
+                         x.UseWebSockets();
+                         x.UseEndpoints(routes =>
+                         {
+                             routes.MapHub<ClientNotifyHub>("/clientNotifyHub");
+                         });
                      });
                  }
                  );

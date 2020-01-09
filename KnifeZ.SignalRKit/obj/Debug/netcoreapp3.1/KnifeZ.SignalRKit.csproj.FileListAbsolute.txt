@@ -1,0 +1,16 @@
+D:\Download\HXJQ.UniWeb\KnifeZ.SignalRKit\bin\Debug\netcoreapp3.1\KnifeZ.SignalRKit.deps.json
+D:\Download\HXJQ.UniWeb\KnifeZ.SignalRKit\bin\Debug\netcoreapp3.1\KnifeZ.SignalRKit.dll
+D:\Download\HXJQ.UniWeb\KnifeZ.SignalRKit\obj\Debug\netcoreapp3.1\KnifeZ.SignalRKit.csprojAssemblyReference.cache
+D:\Download\HXJQ.UniWeb\KnifeZ.SignalRKit\obj\Debug\netcoreapp3.1\KnifeZ.SignalRKit.AssemblyInfoInputs.cache
+D:\Download\HXJQ.UniWeb\KnifeZ.SignalRKit\obj\Debug\netcoreapp3.1\KnifeZ.SignalRKit.AssemblyInfo.cs
+D:\Download\HXJQ.UniWeb\KnifeZ.SignalRKit\bin\Debug\netcoreapp3.1\KnifeZ.SignalRKit.pdb
+D:\Download\HXJQ.UniWeb\KnifeZ.SignalRKit\obj\Debug\netcoreapp3.1\KnifeZ.SignalRKit.dll
+D:\Download\HXJQ.UniWeb\KnifeZ.SignalRKit\obj\Debug\netcoreapp3.1\KnifeZ.SignalRKit.pdb
+D:\repos\_The Lab\gitRepos\CeleryMisfortune\KnifeZ.SignalRKit\obj\Debug\netcoreapp3.1\KnifeZ.SignalRKit.csprojAssemblyReference.cache
+D:\repos\_The Lab\gitRepos\CeleryMisfortune\KnifeZ.SignalRKit\obj\Debug\netcoreapp3.1\KnifeZ.SignalRKit.AssemblyInfoInputs.cache
+D:\repos\_The Lab\gitRepos\CeleryMisfortune\KnifeZ.SignalRKit\obj\Debug\netcoreapp3.1\KnifeZ.SignalRKit.AssemblyInfo.cs
+D:\repos\_The Lab\gitRepos\CeleryMisfortune\KnifeZ.SignalRKit\obj\Debug\netcoreapp3.1\KnifeZ.SignalRKit.dll
+D:\repos\_The Lab\gitRepos\CeleryMisfortune\KnifeZ.SignalRKit\obj\Debug\netcoreapp3.1\KnifeZ.SignalRKit.pdb
+D:\repos\_The Lab\gitRepos\CeleryMisfortune\KnifeZ.SignalRKit\bin\Debug\netcoreapp3.1\KnifeZ.SignalRKit.deps.json
+D:\repos\_The Lab\gitRepos\CeleryMisfortune\KnifeZ.SignalRKit\bin\Debug\netcoreapp3.1\KnifeZ.SignalRKit.dll
+D:\repos\_The Lab\gitRepos\CeleryMisfortune\KnifeZ.SignalRKit\bin\Debug\netcoreapp3.1\KnifeZ.SignalRKit.pdb

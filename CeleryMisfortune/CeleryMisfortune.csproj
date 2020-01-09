@@ -16,6 +16,7 @@
 
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.0" />
     <PackageReference Include="WalkingTec.Mvvm.TagHelpers.LayUI" Version="3.1.0" />
     <PackageReference Include="WalkingTec.Mvvm.Mvc.Admin" Version="3.1.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.0.0-rc4" />
@@ -25,6 +26,7 @@
    <ProjectReference Include="..\CeleryMisfortune.Model\CeleryMisfortune.Model.csproj" />
     <ProjectReference Include="..\CeleryMisfortune.DataAccess\CeleryMisfortune.DataAccess.csproj" />
     <ProjectReference Include="..\CeleryMisfortune.ViewModel\CeleryMisfortune.ViewModel.csproj" />
+    <ProjectReference Include="..\KnifeZ.SignalRKit\KnifeZ.SignalRKit.csproj" />
  </ItemGroup>
 </Project>
 
