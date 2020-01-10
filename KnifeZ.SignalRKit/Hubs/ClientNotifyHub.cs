@@ -21,12 +21,12 @@ namespace KnifeZ.SignalRKit.Hubs
             await base.OnConnectedAsync();
         }
 
-        //发送消息--发送给所有连接的客户端
+        //登录注册--abp框架接口调用，无实义
         public void Register()
         {
 
         }
-        //发送消息--发送给所有连接的客户端
+        //发送消息--发送给所有连接的客户端--abp框架接口调用，无实义
         public async Task GetNotification(string message)
         {
             await Clients.All.SendAsync("getNotification", message);
