@@ -10,5 +10,6 @@
 /CeleryMisfortune.ViewModel/bin
 /CeleryMisfortune.Test/obj
 /CeleryMisfortune.ViewModel/obj
-
+/KnifeZ.SignalRKit/bin
+/KnifeZ.SignalRKit/obj
 .vs
