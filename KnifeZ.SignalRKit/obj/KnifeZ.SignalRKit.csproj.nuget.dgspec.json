@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\GitSource\\CeleryMisfortune\\KnifeZ.SignalRKit\\KnifeZ.SignalRKit.csproj": {}
+    "D:\\repos\\_The Lab\\gitRepos\\CeleryMisfortune\\KnifeZ.SignalRKit\\KnifeZ.SignalRKit.csproj": {}
   },
   "projects": {
-    "E:\\GitSource\\CeleryMisfortune\\KnifeZ.SignalRKit\\KnifeZ.SignalRKit.csproj": {
+    "D:\\repos\\_The Lab\\gitRepos\\CeleryMisfortune\\KnifeZ.SignalRKit\\KnifeZ.SignalRKit.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\GitSource\\CeleryMisfortune\\KnifeZ.SignalRKit\\KnifeZ.SignalRKit.csproj",
+        "projectUniqueName": "D:\\repos\\_The Lab\\gitRepos\\CeleryMisfortune\\KnifeZ.SignalRKit\\KnifeZ.SignalRKit.csproj",
         "projectName": "KnifeZ.SignalRKit",
-        "projectPath": "E:\\GitSource\\CeleryMisfortune\\KnifeZ.SignalRKit\\KnifeZ.SignalRKit.csproj",
-        "packagesPath": "C:\\Users\\KinfeZ\\.nuget\\packages\\",
-        "outputPath": "E:\\GitSource\\CeleryMisfortune\\KnifeZ.SignalRKit\\obj\\",
+        "projectPath": "D:\\repos\\_The Lab\\gitRepos\\CeleryMisfortune\\KnifeZ.SignalRKit\\KnifeZ.SignalRKit.csproj",
+        "packagesPath": "C:\\Users\\Knife\\.nuget\\packages\\",
+        "outputPath": "D:\\repos\\_The Lab\\gitRepos\\CeleryMisfortune\\KnifeZ.SignalRKit\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\KinfeZ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Knife\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

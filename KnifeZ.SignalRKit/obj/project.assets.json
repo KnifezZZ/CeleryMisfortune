@@ -1406,12 +1406,11 @@
       ]
     },
     "System.Reflection.Emit/4.3.0": {
-      "sha512": "228FG0jLcIwTVJyz8CLFKueVqQK36ANazUManGaJHkO0icjiIypKW7YLWLIWahyIkdh5M7mV2dJepllLyA1SKg==",
+      "sha512": "oRMaNXcd6fSizARFl2gABMc9h3ODi+70mU5sa+uugO6NN9K06C41B34WHXJ4dCjnRygzg+x7OBSJQYOk42YuJA==",
       "type": "package",
       "path": "system.reflection.emit/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -1442,12 +1441,11 @@
       ]
     },
     "System.Reflection.Emit.ILGeneration/4.3.0": {
-      "sha512": "59tBslAk9733NXLrUJrwNZEzbMAcu8k344OYo+wfSVygcgZ9lgBdGIzH/nrg3LYhXceynyvTc8t5/GD4Ri0/ng==",
+      "sha512": "cG2+hgm/crVsRoLhiTx/NCB0pR8IH9fYVI8kL3zMAcEYhfpoig9hLgoCdfOCMhSSw705oPISJ4d730DScHi81w==",
       "type": "package",
       "path": "system.reflection.emit.ilgeneration/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -1885,23 +1883,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\KinfeZ\\.nuget\\packages\\": {},
+    "C:\\Users\\Knife\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\GitSource\\CeleryMisfortune\\KnifeZ.SignalRKit\\KnifeZ.SignalRKit.csproj",
+      "projectUniqueName": "D:\\repos\\_The Lab\\gitRepos\\CeleryMisfortune\\KnifeZ.SignalRKit\\KnifeZ.SignalRKit.csproj",
       "projectName": "KnifeZ.SignalRKit",
-      "projectPath": "E:\\GitSource\\CeleryMisfortune\\KnifeZ.SignalRKit\\KnifeZ.SignalRKit.csproj",
-      "packagesPath": "C:\\Users\\KinfeZ\\.nuget\\packages\\",
-      "outputPath": "E:\\GitSource\\CeleryMisfortune\\KnifeZ.SignalRKit\\obj\\",
+      "projectPath": "D:\\repos\\_The Lab\\gitRepos\\CeleryMisfortune\\KnifeZ.SignalRKit\\KnifeZ.SignalRKit.csproj",
+      "packagesPath": "C:\\Users\\Knife\\.nuget\\packages\\",
+      "outputPath": "D:\\repos\\_The Lab\\gitRepos\\CeleryMisfortune\\KnifeZ.SignalRKit\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\KinfeZ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Knife\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
