@@ -99,7 +99,6 @@ export default {
   mounted () {
     let vm = this
     setTimeout(() => {
-      debugger
       window.abp.signalr.hubs.common.invoke('SendMessage', 'hello').catch(function (err) {
         return console.error(err.toString())
       })

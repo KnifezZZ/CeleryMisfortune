@@ -26,6 +26,15 @@
         "meta": {
           "icon": "home"
         }
+      },
+      {
+        "path": "/_god",
+        "name": "god-space",
+        "title": "混沌",
+        "component": "_god-space/index",
+        "meta": {
+          "icon": "home"
+        }
       }
     ]
   },

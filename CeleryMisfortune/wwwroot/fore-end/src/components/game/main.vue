@@ -1,13 +1,12 @@
 <template>
   <a-layout id="layout-cm-fixed">
-    <a-layout-header :style="{ position: 'fixed', zIndex: 1, width: '100%' }">
-      <div class="logo">
-        <a-avatar
-          shape="square"
-          size="large"
-          :style="{backgroundColor: '#00a2ae', verticalAlign: 'middle'}"
-        >大劫主</a-avatar>
-      </div>
+    <!-- <a-layout-header :style="{ position: 'fixed', zIndex: 1, width: '100%',height:'32px' }"></a-layout-header> -->
+    <a-layout-content :style="{ padding: '0 10px', marginTop: '0px',marginButtom:'64px' }">
+      <router-view />
+    </a-layout-content>
+    <a-layout-footer
+      style="text-align: center;position: fixed;bottom: 0px;padding: 0px;width: 100%"
+    >
       <a-menu
         id="head-menu"
         theme="dark"
@@ -24,11 +23,8 @@
           <sub-menu v-else :menu-info="item" :key="item.name" />
         </template>
       </a-menu>
-    </a-layout-header>
-    <a-layout-content :style="{ padding: '0 50px', marginTop: '64px' }">
-      <router-view />
-    </a-layout-content>
-    <a-layout-footer v-if="$config.showFooter" style="textAlign: center">{{$config.footerInfo}}</a-layout-footer>
+    </a-layout-footer>
+    <!-- <a-layout-footer v-if="$config.showFooter" style="textAlign: center">{{$config.footerInfo}}</a-layout-footer> -->
   </a-layout>
 </template>
 <script>

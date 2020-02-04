@@ -42,7 +42,6 @@ namespace KnifeZ.SignalRKit.Hubs
         public Task SendPrivateMessage(string userId, string message)
         {
             return Clients.User(userId).SendAsync("ReceiveMessage", message);
-
         }
 
         public Task OnNotify(string data)

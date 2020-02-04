@@ -15,14 +15,17 @@ export default {
     },
     setUserAccount (state, userAccount) {
       state.userAccount = userAccount
+    },
+    setToken (state, token) {
+      debugger
+      Util.abp.auth.setToken(token.refresh_token, token.tokenExpireDate * 2)
+      Util.abp.utils.setCookieValue(appconst.authorization.encrptedAuthTokenName, token.access_token, token.tokenExpireDate)
     }
   },
   actions: {
     // 登录
     handleLogin ({ state, commit }, values) {
       return new Promise((resolve, reject) => {
-        values.userName = values.userName.trim()
-        commit('setUserAccount', values.userName)
         var payload = {
           userid: values.userName,
           password: values.password,
@@ -33,8 +36,15 @@ export default {
           const data = res.data
           if (res.status === 200) {
             var tokenExpireDate = payload.rememberMe ? (new Date(new Date().getTime() + 1000 * data.expires_in)) : undefined
-            Util.abp.auth.setToken(data.refresh_token, tokenExpireDate)
-            Util.abp.utils.setCookieValue(appconst.authorization.encrptedAuthTokenName, data.access_token, tokenExpireDate, Util.abp.appPath)
+            // 绑定token
+            commit('setToken', {
+              access_token: data.access_token,
+              refresh_token: data.refresh_token,
+              tokenExpireDate: tokenExpireDate
+            })
+            // 绑定用户名
+            commit('setUserAccount', values.userName.trim())
+            // 链接signalR服务器
             SignalRAspNetCoreHelper.initSignalR()
             // 获取菜单路由
             initRouter()
@@ -49,7 +59,11 @@ export default {
     handleLogOut ({ state, commit }) {
       return new Promise((resolve, reject) => {
         // 如果你的退出登录无需请求接口，则可以直接使用下面三行代码而无需使用logout调用接口
-        commit('setToken', '')
+        commit('setToken', {
+          access_token: '',
+          refresh_token: '',
+          tokenExpireDate: 0
+        })
         // 退出登录清除所有缓存
         localStorage.clear()
         resolve()

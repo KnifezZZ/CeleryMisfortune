@@ -97,7 +97,6 @@ export default {
       Page: 1,
       Limit: 5
     }).then(res => {
-      debugger
       if (res.data.Count > 0) {
         this.hasRoler = true
         this.playerRoleData = res.data.Data
