@@ -3,6 +3,7 @@ import App from './App'
 import store from './store'
 import router from './router'
 import config from './config/index'
+import './index.less'
 // abp import--start
 import Ajax from './lib/ajax'
 import Util from './lib/util'

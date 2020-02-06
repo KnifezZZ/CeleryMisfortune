@@ -12,12 +12,17 @@ namespace CeleryMisfortune.ViewModel.PlayerInfoVMs
 {
     public partial class PlayerInfoApiSearcher : BaseSearcher
     {
+        [Display(Name = "姓名")]
         public String Name { get; set; }
+        [Display(Name = "名号")]
         public String NickName { get; set; }
+        [Display(Name = "出身")]
         public String BirthPlace { get; set; }
+        [Display(Name = "性别")]
         public Int32? Sex { get; set; }
+        [Display(Name = "门派")]
         public Int32? Sect { get; set; }
-        public string CreateBy { get; set; }
+
         protected override void InitVM()
         {
         }

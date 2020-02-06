@@ -91,6 +91,10 @@ export default {
 }
 </script>
 <style>
+#layout-cm-fixed {
+  height: 100%;
+  overflow: hidden;
+}
 #layout-cm-fixed .logo {
   height: 40px;
   line-height: 40px;

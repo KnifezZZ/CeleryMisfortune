@@ -13,7 +13,7 @@ namespace CeleryMisfortune.Controllers
 {
     
     [AuthorizeJwt]
-    [ActionDescription("角色管理")]
+    [ActionDescription("角色信息")]
     [ApiController]
     [Route("api/PlayerInfo")]
 	public partial class PlayerInfoApiController : BaseApiController

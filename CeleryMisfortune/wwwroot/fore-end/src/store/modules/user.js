@@ -6,18 +6,17 @@ import SignalRAspNetCoreHelper from '@/lib/SignalRAspNetCoreHelper'
 export default {
   state: {
     userAccount: '',
-    playerlist: null,
+    currUser: '',
     access: []
   },
   mutations: {
     setUserId (state, userId) {
-      state.userId = userId
+      state.currUser = userId
     },
     setUserAccount (state, userAccount) {
       state.userAccount = userAccount
     },
     setToken (state, token) {
-      debugger
       Util.abp.auth.setToken(token.refresh_token, token.tokenExpireDate * 2)
       Util.abp.utils.setCookieValue(appconst.authorization.encrptedAuthTokenName, token.access_token, token.tokenExpireDate)
     }

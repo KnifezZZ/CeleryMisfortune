@@ -12,6 +12,10 @@ namespace CeleryMisfortune.ViewModel.PlayerSpecialVMs
 {
     public partial class PlayerSpecialSearcher : BaseSearcher
     {
+        [Display(Name = "关联角色")]
+        public String FK_PlayerGuId { get; set; }
+        [Display(Name = "根骨")]
+        public Int32? Strength { get; set; }
 
         protected override void InitVM()
         {

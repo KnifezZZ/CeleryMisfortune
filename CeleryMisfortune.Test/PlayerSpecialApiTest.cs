@@ -37,13 +37,13 @@ namespace CeleryMisfortune.Test
             PlayerSpecialApiVM vm = _controller.CreateVM<PlayerSpecialApiVM>();
             PlayerSpecial v = new PlayerSpecial();
             
-            v.FK_PlayerGuId = "45";
-            v.Strength = 48;
-            v.Perception = 32;
-            v.Endurance = 89;
-            v.Charisma = 77;
-            v.Intelligence = 60;
-            v.Luck = 32;
+            v.Strength = 2;
+            v.Perception = 43;
+            v.Endurance = 28;
+            v.Charisma = 38;
+            v.Intelligence = 61;
+            v.Agility = 24;
+            v.Luck = 19;
             vm.Entity = v;
             var rv = _controller.Add(vm);
             Assert.IsInstanceOfType(rv, typeof(OkObjectResult));
@@ -52,13 +52,13 @@ namespace CeleryMisfortune.Test
             {
                 var data = context.Set<PlayerSpecial>().FirstOrDefault();
                 
-                Assert.AreEqual(data.FK_PlayerGuId, "45");
-                Assert.AreEqual(data.Strength, 48);
-                Assert.AreEqual(data.Perception, 32);
-                Assert.AreEqual(data.Endurance, 89);
-                Assert.AreEqual(data.Charisma, 77);
-                Assert.AreEqual(data.Intelligence, 60);
-                Assert.AreEqual(data.Luck, 32);
+                Assert.AreEqual(data.Strength, 2);
+                Assert.AreEqual(data.Perception, 43);
+                Assert.AreEqual(data.Endurance, 28);
+                Assert.AreEqual(data.Charisma, 38);
+                Assert.AreEqual(data.Intelligence, 61);
+                Assert.AreEqual(data.Agility, 24);
+                Assert.AreEqual(data.Luck, 19);
                 Assert.AreEqual(data.CreateBy, "user");
                 Assert.IsTrue(DateTime.Now.Subtract(data.CreateTime.Value).Seconds < 10);
             }
@@ -71,13 +71,13 @@ namespace CeleryMisfortune.Test
             using (var context = new DataContext(_seed, DBTypeEnum.Memory))
             {
        			
-                v.FK_PlayerGuId = "1231";
-                v.Strength = 48;
-                v.Perception = 32;
-                v.Endurance = 89;
-                v.Charisma = 77;
-                v.Intelligence = 60;
-                v.Luck = 32;
+                v.Strength = 2;
+                v.Perception = 43;
+                v.Endurance = 28;
+                v.Charisma = 38;
+                v.Intelligence = 61;
+                v.Agility = 24;
+                v.Luck = 19;
                 context.Set<PlayerSpecial>().Add(v);
                 context.SaveChanges();
             }
@@ -87,22 +87,22 @@ namespace CeleryMisfortune.Test
             v = new PlayerSpecial();
             v.ID = oldID;
        		
-            v.FK_PlayerGuId = "1231";
-            v.Strength = 42;
-            v.Perception = 51;
-            v.Endurance = 11;
-            v.Charisma = 20;
-            v.Intelligence = 39;
-            v.Luck = 80;
+            v.Strength = 51;
+            v.Perception = 7;
+            v.Endurance = 80;
+            v.Charisma = 69;
+            v.Intelligence = 54;
+            v.Agility = 88;
+            v.Luck = 27;
             vm.Entity = v;
             vm.FC = new Dictionary<string, object>();
 			
-            vm.FC.Add("Entity.FK_PlayerGuId", "");
             vm.FC.Add("Entity.Strength", "");
             vm.FC.Add("Entity.Perception", "");
             vm.FC.Add("Entity.Endurance", "");
             vm.FC.Add("Entity.Charisma", "");
             vm.FC.Add("Entity.Intelligence", "");
+            vm.FC.Add("Entity.Agility", "");
             vm.FC.Add("Entity.Luck", "");
             var rv = _controller.Edit(vm);
             Assert.IsInstanceOfType(rv, typeof(OkObjectResult));
@@ -111,13 +111,13 @@ namespace CeleryMisfortune.Test
             {
                 var data = context.Set<PlayerSpecial>().FirstOrDefault();
  				
-                Assert.AreEqual(data.FK_PlayerGuId, 31);
-                Assert.AreEqual(data.Strength, 42);
-                Assert.AreEqual(data.Perception, 51);
-                Assert.AreEqual(data.Endurance, 11);
-                Assert.AreEqual(data.Charisma, 20);
-                Assert.AreEqual(data.Intelligence, 39);
-                Assert.AreEqual(data.Luck, 80);
+                Assert.AreEqual(data.Strength, 51);
+                Assert.AreEqual(data.Perception, 7);
+                Assert.AreEqual(data.Endurance, 80);
+                Assert.AreEqual(data.Charisma, 69);
+                Assert.AreEqual(data.Intelligence, 54);
+                Assert.AreEqual(data.Agility, 88);
+                Assert.AreEqual(data.Luck, 27);
                 Assert.AreEqual(data.UpdateBy, "user");
                 Assert.IsTrue(DateTime.Now.Subtract(data.UpdateTime.Value).Seconds < 10);
             }
@@ -131,13 +131,13 @@ namespace CeleryMisfortune.Test
             using (var context = new DataContext(_seed, DBTypeEnum.Memory))
             {
         		
-                v.FK_PlayerGuId = "1231";
-                v.Strength = 48;
-                v.Perception = 32;
-                v.Endurance = 89;
-                v.Charisma = 77;
-                v.Intelligence = 60;
-                v.Luck = 32;
+                v.Strength = 2;
+                v.Perception = 43;
+                v.Endurance = 28;
+                v.Charisma = 38;
+                v.Intelligence = 61;
+                v.Agility = 24;
+                v.Luck = 19;
                 context.Set<PlayerSpecial>().Add(v);
                 context.SaveChanges();
             }
@@ -153,20 +153,20 @@ namespace CeleryMisfortune.Test
             using (var context = new DataContext(_seed, DBTypeEnum.Memory))
             {
 				
-                v1.FK_PlayerGuId = "1231";
-                v1.Strength = 48;
-                v1.Perception = 32;
-                v1.Endurance = 89;
-                v1.Charisma = 77;
-                v1.Intelligence = 60;
-                v1.Luck = 32;
-                v2.FK_PlayerGuId = "1231";
-                v2.Strength = 42;
-                v2.Perception = 51;
-                v2.Endurance = 11;
-                v2.Charisma = 20;
-                v2.Intelligence = 39;
-                v2.Luck = 80;
+                v1.Strength = 2;
+                v1.Perception = 43;
+                v1.Endurance = 28;
+                v1.Charisma = 38;
+                v1.Intelligence = 61;
+                v1.Agility = 24;
+                v1.Luck = 19;
+                v2.Strength = 51;
+                v2.Perception = 7;
+                v2.Endurance = 80;
+                v2.Charisma = 69;
+                v2.Intelligence = 54;
+                v2.Agility = 88;
+                v2.Luck = 27;
                 context.Set<PlayerSpecial>().Add(v1);
                 context.Set<PlayerSpecial>().Add(v2);
                 context.SaveChanges();

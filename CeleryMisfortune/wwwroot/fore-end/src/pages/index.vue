@@ -70,6 +70,7 @@
 import IconFont from '@/components/icon'
 import { GetMockJson } from '@/api/app'
 import { Search } from '@/api/player'
+import { mapMutations } from 'vuex'
 export default {
   name: 'Index',
   components: {
@@ -84,8 +85,14 @@ export default {
     }
   },
   methods: {
+    ...mapMutations([
+      'setUserId'
+    ]),
     StartGame (id) {
-      this.$info({ title: '你选择了--' + id })
+      this.setUserId(id)
+      this.$router.push({
+        name: 'main-page'
+      })
     },
     ShowSpecialItem (id) {
       this.$info({ title: '你选择了--' + id })

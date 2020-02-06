@@ -42,13 +42,13 @@ namespace CeleryMisfortune.Test
             PlayerSpecialVM vm = rv.Model as PlayerSpecialVM;
             PlayerSpecial v = new PlayerSpecial();
 			
-            v.FK_PlayerGuId = "62";
-            v.Strength = 33;
-            v.Perception = 75;
-            v.Endurance = 81;
-            v.Charisma = 2;
-            v.Intelligence = 1;
-            v.Luck = 80;
+            v.Strength = 70;
+            v.Perception = 76;
+            v.Endurance = 25;
+            v.Charisma = 74;
+            v.Intelligence = 72;
+            v.Agility = 28;
+            v.Luck = 51;
             vm.Entity = v;
             _controller.Create(vm);
 
@@ -56,13 +56,13 @@ namespace CeleryMisfortune.Test
             {
                 var data = context.Set<PlayerSpecial>().FirstOrDefault();
 				
-                Assert.AreEqual(data.FK_PlayerGuId, "62");
-                Assert.AreEqual(data.Strength, 33);
-                Assert.AreEqual(data.Perception, 75);
-                Assert.AreEqual(data.Endurance, 81);
-                Assert.AreEqual(data.Charisma, 2);
-                Assert.AreEqual(data.Intelligence, 1);
-                Assert.AreEqual(data.Luck, 80);
+                Assert.AreEqual(data.Strength, 70);
+                Assert.AreEqual(data.Perception, 76);
+                Assert.AreEqual(data.Endurance, 25);
+                Assert.AreEqual(data.Charisma, 74);
+                Assert.AreEqual(data.Intelligence, 72);
+                Assert.AreEqual(data.Agility, 28);
+                Assert.AreEqual(data.Luck, 51);
                 Assert.AreEqual(data.CreateBy, "user");
                 Assert.IsTrue(DateTime.Now.Subtract(data.CreateTime.Value).Seconds < 10);
             }
@@ -76,13 +76,13 @@ namespace CeleryMisfortune.Test
             using (var context = new DataContext(_seed, DBTypeEnum.Memory))
             {
        			
-                v.FK_PlayerGuId = "62";
-                v.Strength = 33;
-                v.Perception = 75;
-                v.Endurance = 81;
-                v.Charisma = 2;
-                v.Intelligence = 1;
-                v.Luck = 80;
+                v.Strength = 70;
+                v.Perception = 76;
+                v.Endurance = 25;
+                v.Charisma = 74;
+                v.Intelligence = 72;
+                v.Agility = 28;
+                v.Luck = 51;
                 context.Set<PlayerSpecial>().Add(v);
                 context.SaveChanges();
             }
@@ -94,22 +94,22 @@ namespace CeleryMisfortune.Test
             v = new PlayerSpecial();
             v.ID = vm.Entity.ID;
        		
-            v.FK_PlayerGuId = "61";
-            v.Strength = 15;
-            v.Perception = 12;
-            v.Endurance = 55;
-            v.Charisma = 54;
-            v.Intelligence = 37;
-            v.Luck = 5;
+            v.Strength = 88;
+            v.Perception = 62;
+            v.Endurance = 44;
+            v.Charisma = 64;
+            v.Intelligence = 24;
+            v.Agility = 89;
+            v.Luck = 87;
             vm.Entity = v;
             vm.FC = new Dictionary<string, object>();
 			
-            vm.FC.Add("Entity.FK_PlayerGuId", "");
             vm.FC.Add("Entity.Strength", "");
             vm.FC.Add("Entity.Perception", "");
             vm.FC.Add("Entity.Endurance", "");
             vm.FC.Add("Entity.Charisma", "");
             vm.FC.Add("Entity.Intelligence", "");
+            vm.FC.Add("Entity.Agility", "");
             vm.FC.Add("Entity.Luck", "");
             _controller.Edit(vm);
 
@@ -117,13 +117,13 @@ namespace CeleryMisfortune.Test
             {
                 var data = context.Set<PlayerSpecial>().FirstOrDefault();
  				
-                Assert.AreEqual(data.FK_PlayerGuId, 61);
-                Assert.AreEqual(data.Strength, 15);
-                Assert.AreEqual(data.Perception, 12);
-                Assert.AreEqual(data.Endurance, 55);
-                Assert.AreEqual(data.Charisma, 54);
-                Assert.AreEqual(data.Intelligence, 37);
-                Assert.AreEqual(data.Luck, 5);
+                Assert.AreEqual(data.Strength, 88);
+                Assert.AreEqual(data.Perception, 62);
+                Assert.AreEqual(data.Endurance, 44);
+                Assert.AreEqual(data.Charisma, 64);
+                Assert.AreEqual(data.Intelligence, 24);
+                Assert.AreEqual(data.Agility, 89);
+                Assert.AreEqual(data.Luck, 87);
                 Assert.AreEqual(data.UpdateBy, "user");
                 Assert.IsTrue(DateTime.Now.Subtract(data.UpdateTime.Value).Seconds < 10);
             }
@@ -138,13 +138,13 @@ namespace CeleryMisfortune.Test
             using (var context = new DataContext(_seed, DBTypeEnum.Memory))
             {
         		
-                v.FK_PlayerGuId = "62";
-                v.Strength = 33;
-                v.Perception = 75;
-                v.Endurance = 81;
-                v.Charisma = 2;
-                v.Intelligence = 1;
-                v.Luck = 80;
+                v.Strength = 70;
+                v.Perception = 76;
+                v.Endurance = 25;
+                v.Charisma = 74;
+                v.Intelligence = 72;
+                v.Agility = 28;
+                v.Luck = 51;
                 context.Set<PlayerSpecial>().Add(v);
                 context.SaveChanges();
             }
@@ -173,13 +173,13 @@ namespace CeleryMisfortune.Test
             using (var context = new DataContext(_seed, DBTypeEnum.Memory))
             {
 				
-                v.FK_PlayerGuId = "62";
-                v.Strength = 33;
-                v.Perception = 75;
-                v.Endurance = 81;
-                v.Charisma = 2;
-                v.Intelligence = 1;
-                v.Luck = 80;
+                v.Strength = 70;
+                v.Perception = 76;
+                v.Endurance = 25;
+                v.Charisma = 74;
+                v.Intelligence = 72;
+                v.Agility = 28;
+                v.Luck = 51;
                 context.Set<PlayerSpecial>().Add(v);
                 context.SaveChanges();
             }
@@ -196,20 +196,20 @@ namespace CeleryMisfortune.Test
             using (var context = new DataContext(_seed, DBTypeEnum.Memory))
             {
 				
-                v1.FK_PlayerGuId = "62";
-                v1.Strength = 33;
-                v1.Perception = 75;
-                v1.Endurance = 81;
-                v1.Charisma = 2;
-                v1.Intelligence = 1;
-                v1.Luck = 80;
-                v2.FK_PlayerGuId = "61";
-                v2.Strength = 15;
-                v2.Perception = 12;
-                v2.Endurance = 55;
-                v2.Charisma = 54;
-                v2.Intelligence = 37;
-                v2.Luck = 5;
+                v1.Strength = 70;
+                v1.Perception = 76;
+                v1.Endurance = 25;
+                v1.Charisma = 74;
+                v1.Intelligence = 72;
+                v1.Agility = 28;
+                v1.Luck = 51;
+                v2.Strength = 88;
+                v2.Perception = 62;
+                v2.Endurance = 44;
+                v2.Charisma = 64;
+                v2.Intelligence = 24;
+                v2.Agility = 89;
+                v2.Luck = 87;
                 context.Set<PlayerSpecial>().Add(v1);
                 context.Set<PlayerSpecial>().Add(v2);
                 context.SaveChanges();

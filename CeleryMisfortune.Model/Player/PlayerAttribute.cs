@@ -9,8 +9,15 @@ namespace KnifeZ.CelestialMisfortune.Player
     /// <summary>
     /// 玩家核心属性
     /// </summary>
-    public class PlayerAttribute:BasePoco
+    public class PlayerAttribute : BasePoco
     {
+        [Display(Name = "属性名称")]
+        [StringLength(255)]
+        public string AttrName { get; set; }
+        [Display(Name ="属性值")]
+        public int AttrValue { get; set; }
+        [Display(Name ="属性类型")]
+        public int AttributeType { get; set; }
 
     }
 }

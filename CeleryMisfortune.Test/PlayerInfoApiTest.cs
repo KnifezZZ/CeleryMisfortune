@@ -37,8 +37,8 @@ namespace CeleryMisfortune.Test
             PlayerInfoApiVM vm = _controller.CreateVM<PlayerInfoApiVM>();
             PlayerInfo v = new PlayerInfo();
             
-            v.Sex = 24;
-            v.Sect = 89;
+            v.Sex = 29;
+            v.Sect = 49;
             vm.Entity = v;
             var rv = _controller.Add(vm);
             Assert.IsInstanceOfType(rv, typeof(OkObjectResult));
@@ -47,8 +47,8 @@ namespace CeleryMisfortune.Test
             {
                 var data = context.Set<PlayerInfo>().FirstOrDefault();
                 
-                Assert.AreEqual(data.Sex, 24);
-                Assert.AreEqual(data.Sect, 89);
+                Assert.AreEqual(data.Sex, 29);
+                Assert.AreEqual(data.Sect, 49);
                 Assert.AreEqual(data.CreateBy, "user");
                 Assert.IsTrue(DateTime.Now.Subtract(data.CreateTime.Value).Seconds < 10);
             }
@@ -61,8 +61,8 @@ namespace CeleryMisfortune.Test
             using (var context = new DataContext(_seed, DBTypeEnum.Memory))
             {
        			
-                v.Sex = 24;
-                v.Sect = 89;
+                v.Sex = 29;
+                v.Sect = 49;
                 context.Set<PlayerInfo>().Add(v);
                 context.SaveChanges();
             }
@@ -72,8 +72,8 @@ namespace CeleryMisfortune.Test
             v = new PlayerInfo();
             v.ID = oldID;
        		
-            v.Sex = 47;
-            v.Sect = 40;
+            v.Sex = 45;
+            v.Sect = 10;
             vm.Entity = v;
             vm.FC = new Dictionary<string, object>();
 			
@@ -86,8 +86,8 @@ namespace CeleryMisfortune.Test
             {
                 var data = context.Set<PlayerInfo>().FirstOrDefault();
  				
-                Assert.AreEqual(data.Sex, 47);
-                Assert.AreEqual(data.Sect, 40);
+                Assert.AreEqual(data.Sex, 45);
+                Assert.AreEqual(data.Sect, 10);
                 Assert.AreEqual(data.UpdateBy, "user");
                 Assert.IsTrue(DateTime.Now.Subtract(data.UpdateTime.Value).Seconds < 10);
             }
@@ -101,8 +101,8 @@ namespace CeleryMisfortune.Test
             using (var context = new DataContext(_seed, DBTypeEnum.Memory))
             {
         		
-                v.Sex = 24;
-                v.Sect = 89;
+                v.Sex = 29;
+                v.Sect = 49;
                 context.Set<PlayerInfo>().Add(v);
                 context.SaveChanges();
             }
@@ -118,10 +118,10 @@ namespace CeleryMisfortune.Test
             using (var context = new DataContext(_seed, DBTypeEnum.Memory))
             {
 				
-                v1.Sex = 24;
-                v1.Sect = 89;
-                v2.Sex = 47;
-                v2.Sect = 40;
+                v1.Sex = 29;
+                v1.Sect = 49;
+                v2.Sex = 45;
+                v2.Sect = 10;
                 context.Set<PlayerInfo>().Add(v1);
                 context.Set<PlayerInfo>().Add(v2);
                 context.SaveChanges();

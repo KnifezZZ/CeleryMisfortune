@@ -52,6 +52,11 @@ namespace KnifeZ.CelestialMisfortune.Player
         [Display(Name = "悟性")]
         public int Intelligence { get; set; }
         /// <summary>
+        /// 敏捷
+        /// </summary>
+        [Display(Name = "敏捷")]
+        public int Agility { get; set; }
+        /// <summary>
         /// 幸运，福源
         /// </summary>
         [Display(Name = "福源")]

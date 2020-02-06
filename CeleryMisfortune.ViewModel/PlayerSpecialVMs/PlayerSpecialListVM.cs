@@ -37,6 +37,7 @@ namespace CeleryMisfortune.ViewModel.PlayerSpecialVMs
                 this.MakeGridHeader(x => x.Endurance),
                 this.MakeGridHeader(x => x.Charisma),
                 this.MakeGridHeader(x => x.Intelligence),
+                this.MakeGridHeader(x => x.Agility),
                 this.MakeGridHeader(x => x.Luck),
                 this.MakeGridHeaderAction(width: 200)
             };
@@ -45,6 +46,8 @@ namespace CeleryMisfortune.ViewModel.PlayerSpecialVMs
         public override IOrderedQueryable<PlayerSpecial_View> GetSearchQuery()
         {
             var query = DC.Set<PlayerSpecial>()
+                .CheckContain(Searcher.FK_PlayerGuId, x=>x.FK_PlayerGuId)
+                .CheckEqual(Searcher.Strength, x=>x.Strength)
                 .Select(x => new PlayerSpecial_View
                 {
 				    ID = x.ID,
@@ -54,6 +57,7 @@ namespace CeleryMisfortune.ViewModel.PlayerSpecialVMs
                     Endurance = x.Endurance,
                     Charisma = x.Charisma,
                     Intelligence = x.Intelligence,
+                    Agility = x.Agility,
                     Luck = x.Luck,
                 })
                 .OrderBy(x => x.ID);
