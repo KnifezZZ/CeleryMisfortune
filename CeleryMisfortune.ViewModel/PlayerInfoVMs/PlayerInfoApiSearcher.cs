@@ -22,6 +22,8 @@ namespace CeleryMisfortune.ViewModel.PlayerInfoVMs
         public Int32? Sex { get; set; }
         [Display(Name = "门派")]
         public Int32? Sect { get; set; }
+        [Display(Name = "是否陨落")]
+        public Boolean? IsAlive { get; set; }
 
         protected override void InitVM()
         {

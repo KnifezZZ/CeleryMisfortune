@@ -1,0 +1,18 @@
+﻿@model CeleryMisfortune.ViewModel.PlayerStateVMs.PlayerStateVM
+
+<wt:form vm="@Model">
+<wt:row items-per-row="ItemsPerRowEnum.Two">
+<wt:display field="Entity.FK_PlayerGuId" />
+<wt:display field="Entity.StateLevel" />
+<wt:display field="Entity.LevelExp" />
+<wt:display field="Entity.LifeRemark" />
+<wt:display field="Entity.MaxLifeTime" />
+<wt:display field="Entity.CurrentLife" />
+<wt:display field="Entity.Energy" />
+<wt:display field="Entity.Money" />
+<wt:display field="Entity.Gold" />
+</wt:row>
+    <wt:row align=" AlignEnum.Right">
+        <wt:closebutton />
+    </wt:row>
+</wt:form>

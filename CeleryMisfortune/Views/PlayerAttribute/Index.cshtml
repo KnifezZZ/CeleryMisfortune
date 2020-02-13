@@ -1,0 +1,10 @@
+﻿@model CeleryMisfortune.ViewModel.PlayerAttributeVMs.PlayerAttributeListVM
+
+<wt:searchpanel vm="@Model" reset-btn="true">
+<wt:row items-per-row="ItemsPerRowEnum.Three">
+<wt:textbox field="Searcher.FK_PlayerGuid" />
+<wt:textbox field="Searcher.AttrName" />
+<wt:textbox field="Searcher.AttributeType" />
+</wt:row>
+</wt:searchpanel>
+<wt:grid vm="@Model" url="/PlayerAttribute/Search"/>

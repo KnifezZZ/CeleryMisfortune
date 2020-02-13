@@ -36,6 +36,7 @@ namespace CeleryMisfortune.ViewModel.PlayerInfoVMs
                 this.MakeGridHeader(x => x.BirthPlace),
                 this.MakeGridHeader(x => x.Sex),
                 this.MakeGridHeader(x => x.Sect),
+                this.MakeGridHeader(x => x.IsAlive),
                 this.MakeGridHeaderAction(width: 200)
             };
         }
@@ -48,6 +49,7 @@ namespace CeleryMisfortune.ViewModel.PlayerInfoVMs
                 .CheckContain(Searcher.BirthPlace, x=>x.BirthPlace)
                 .CheckEqual(Searcher.Sex, x=>x.Sex)
                 .CheckEqual(Searcher.Sect, x=>x.Sect)
+                .CheckEqual(Searcher.IsAlive, x=>x.IsAlive)
                 .Select(x => new PlayerInfoApi_View
                 {
 				    ID = x.ID,
@@ -56,6 +58,7 @@ namespace CeleryMisfortune.ViewModel.PlayerInfoVMs
                     BirthPlace = x.BirthPlace,
                     Sex = x.Sex,
                     Sect = x.Sect,
+                    IsAlive = x.IsAlive,
                 })
                 .OrderBy(x => x.ID);
             return query;

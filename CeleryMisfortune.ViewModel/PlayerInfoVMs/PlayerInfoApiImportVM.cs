@@ -22,6 +22,8 @@ namespace CeleryMisfortune.ViewModel.PlayerInfoVMs
         public ExcelPropety Sex_Excel = ExcelPropety.CreateProperty<PlayerInfo>(x => x.Sex);
         [Display(Name = "门派")]
         public ExcelPropety Sect_Excel = ExcelPropety.CreateProperty<PlayerInfo>(x => x.Sect);
+        [Display(Name = "是否陨落")]
+        public ExcelPropety IsAlive_Excel = ExcelPropety.CreateProperty<PlayerInfo>(x => x.IsAlive);
 
 	    protected override void InitVM()
         {

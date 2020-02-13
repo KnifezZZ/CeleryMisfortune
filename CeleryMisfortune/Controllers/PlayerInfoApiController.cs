@@ -35,6 +35,18 @@ namespace CeleryMisfortune.Controllers
             return vm;
         }
 
+        [ActionDescription("获取角色聚合信息")]
+        [HttpGet("GetUnitInfo/{id}")]
+        public PlayerInfoApiUnitInfo GetPlayerUnitInfo(string id)
+        {
+
+            var vm = CreateVM<PlayerInfoApiVM>(id);
+            
+            var re= vm.GetUnitInfoVM(vm.Entity);
+            return re;
+        }
+
+
         [ActionDescription("新建")]
         [HttpPost("Add")]
         public IActionResult Add(PlayerInfoApiVM vm)

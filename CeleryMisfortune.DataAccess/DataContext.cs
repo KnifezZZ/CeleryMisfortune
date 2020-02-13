@@ -1,4 +1,5 @@
-﻿using KnifeZ.CelestialMisfortune.Player;
+﻿using CeleryMisfortune.Model.Base;
+using KnifeZ.CelestialMisfortune.Player;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using System;
@@ -10,6 +11,7 @@ namespace CeleryMisfortune.DataAccess
 {
     public class DataContext : FrameworkContext
     {
+        public DbSet<BaseOption> BaseOptions { get; set; }
         public DbSet<PlayerInfo> PlayerInfos { get; set; }
         public DbSet<PlayerProperty> PlayerProperties { get; set; }
         public DbSet<PlayerSpecial> PlayerSpecials { get; set; }

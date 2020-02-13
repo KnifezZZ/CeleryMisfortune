@@ -23,7 +23,7 @@ namespace CeleryMisfortune.Controllers
             if (ConfigInfo.IsQuickDebug == true)
             {
                 vm.ITCode = "admin";
-                vm.Password = "000000";
+                vm.Password = "zxcvbnm,./159";
             }
             return View(vm);
         }

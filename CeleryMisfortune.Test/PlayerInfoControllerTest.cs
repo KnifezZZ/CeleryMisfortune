@@ -42,8 +42,8 @@ namespace CeleryMisfortune.Test
             PlayerInfoVM vm = rv.Model as PlayerInfoVM;
             PlayerInfo v = new PlayerInfo();
 			
-            v.Sex = 65;
-            v.Sect = 1;
+            v.Sex = 58;
+            v.Sect = 21;
             vm.Entity = v;
             _controller.Create(vm);
 
@@ -51,8 +51,8 @@ namespace CeleryMisfortune.Test
             {
                 var data = context.Set<PlayerInfo>().FirstOrDefault();
 				
-                Assert.AreEqual(data.Sex, 65);
-                Assert.AreEqual(data.Sect, 1);
+                Assert.AreEqual(data.Sex, 58);
+                Assert.AreEqual(data.Sect, 21);
                 Assert.AreEqual(data.CreateBy, "user");
                 Assert.IsTrue(DateTime.Now.Subtract(data.CreateTime.Value).Seconds < 10);
             }
@@ -66,8 +66,8 @@ namespace CeleryMisfortune.Test
             using (var context = new DataContext(_seed, DBTypeEnum.Memory))
             {
        			
-                v.Sex = 65;
-                v.Sect = 1;
+                v.Sex = 58;
+                v.Sect = 21;
                 context.Set<PlayerInfo>().Add(v);
                 context.SaveChanges();
             }
@@ -79,8 +79,8 @@ namespace CeleryMisfortune.Test
             v = new PlayerInfo();
             v.ID = vm.Entity.ID;
        		
-            v.Sex = 99;
-            v.Sect = 90;
+            v.Sex = 60;
+            v.Sect = 40;
             vm.Entity = v;
             vm.FC = new Dictionary<string, object>();
 			
@@ -92,8 +92,8 @@ namespace CeleryMisfortune.Test
             {
                 var data = context.Set<PlayerInfo>().FirstOrDefault();
  				
-                Assert.AreEqual(data.Sex, 99);
-                Assert.AreEqual(data.Sect, 90);
+                Assert.AreEqual(data.Sex, 60);
+                Assert.AreEqual(data.Sect, 40);
                 Assert.AreEqual(data.UpdateBy, "user");
                 Assert.IsTrue(DateTime.Now.Subtract(data.UpdateTime.Value).Seconds < 10);
             }
@@ -108,8 +108,8 @@ namespace CeleryMisfortune.Test
             using (var context = new DataContext(_seed, DBTypeEnum.Memory))
             {
         		
-                v.Sex = 65;
-                v.Sect = 1;
+                v.Sex = 58;
+                v.Sect = 21;
                 context.Set<PlayerInfo>().Add(v);
                 context.SaveChanges();
             }
@@ -138,8 +138,8 @@ namespace CeleryMisfortune.Test
             using (var context = new DataContext(_seed, DBTypeEnum.Memory))
             {
 				
-                v.Sex = 65;
-                v.Sect = 1;
+                v.Sex = 58;
+                v.Sect = 21;
                 context.Set<PlayerInfo>().Add(v);
                 context.SaveChanges();
             }
@@ -156,10 +156,10 @@ namespace CeleryMisfortune.Test
             using (var context = new DataContext(_seed, DBTypeEnum.Memory))
             {
 				
-                v1.Sex = 65;
-                v1.Sect = 1;
-                v2.Sex = 99;
-                v2.Sect = 90;
+                v1.Sex = 58;
+                v1.Sect = 21;
+                v2.Sex = 60;
+                v2.Sect = 40;
                 context.Set<PlayerInfo>().Add(v1);
                 context.Set<PlayerInfo>().Add(v2);
                 context.SaveChanges();

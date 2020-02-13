@@ -1,0 +1,14 @@
+﻿@model CeleryMisfortune.ViewModel.PlayerAttributeVMs.PlayerAttributeVM
+
+<wt:form vm="@Model">
+<wt:row items-per-row="ItemsPerRowEnum.Two">
+<wt:textbox field="Entity.FK_PlayerGuid" />
+<wt:textbox field="Entity.AttrName" />
+<wt:textbox field="Entity.AttrValue" />
+<wt:textbox field="Entity.AttributeType" />
+</wt:row>
+    <wt:row align="AlignEnum.Right">
+        <wt:submitbutton />
+        <wt:closebutton />
+    </wt:row>
+</wt:form>

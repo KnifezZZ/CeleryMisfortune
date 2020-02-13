@@ -11,6 +11,10 @@ namespace KnifeZ.CelestialMisfortune.Player
     /// </summary>
     public class PlayerAttribute : BasePoco
     {
+
+        [Display(Name = "关联角色ID")]
+        [StringLength(255)]
+        public string FK_PlayerGuid { get; set; }
         [Display(Name = "属性名称")]
         [StringLength(255)]
         public string AttrName { get; set; }

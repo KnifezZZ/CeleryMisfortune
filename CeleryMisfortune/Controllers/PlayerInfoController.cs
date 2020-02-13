@@ -9,7 +9,7 @@ using CeleryMisfortune.ViewModel.PlayerInfoVMs;
 namespace CeleryMisfortune.Controllers
 {
     
-    [ActionDescription("基础信息")]
+    [ActionDescription("角色信息")]
     public partial class PlayerInfoController : BaseController
     {
         #region 搜索

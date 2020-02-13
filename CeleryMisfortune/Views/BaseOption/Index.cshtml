@@ -1,0 +1,9 @@
+﻿@model CeleryMisfortune.ViewModel.BaseOptionVMs.BaseOptionListVM
+
+<wt:searchpanel vm="@Model" reset-btn="true">
+<wt:row items-per-row="ItemsPerRowEnum.Three">
+<wt:textbox field="Searcher.PID" />
+<wt:textbox field="Searcher.Text" />
+</wt:row>
+</wt:searchpanel>
+<wt:grid vm="@Model" url="/BaseOption/Search"/>

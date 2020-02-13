@@ -19,11 +19,12 @@ namespace CeleryMisfortune.DataAccess.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("KnifeZ.CelestialMisfortune.Player.PlayerAttribute", b =>
+            modelBuilder.Entity("CeleryMisfortune.Model.Base.BaseOption", b =>
                 {
-                    b.Property<Guid>("ID")
+                    b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("CreateBy")
                         .HasColumnType("nvarchar(50)")
@@ -31,6 +32,52 @@ namespace CeleryMisfortune.DataAccess.Migrations
 
                     b.Property<DateTime?>("CreateTime")
                         .HasColumnType("datetime2");
+
+                    b.Property<int>("PID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Text")
+                        .HasColumnType("nvarchar(255)")
+                        .HasMaxLength(255);
+
+                    b.Property<string>("UpdateBy")
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
+
+                    b.Property<DateTime?>("UpdateTime")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("BaseOptions");
+                });
+
+            modelBuilder.Entity("KnifeZ.CelestialMisfortune.Player.PlayerAttribute", b =>
+                {
+                    b.Property<Guid>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("AttrName")
+                        .HasColumnType("nvarchar(255)")
+                        .HasMaxLength(255);
+
+                    b.Property<int>("AttrValue")
+                        .HasColumnType("int");
+
+                    b.Property<int>("AttributeType")
+                        .HasColumnType("int");
+
+                    b.Property<string>("CreateBy")
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
+
+                    b.Property<DateTime?>("CreateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("FK_PlayerGuid")
+                        .HasColumnType("nvarchar(255)")
+                        .HasMaxLength(255);
 
                     b.Property<string>("UpdateBy")
                         .HasColumnType("nvarchar(50)")
@@ -60,6 +107,9 @@ namespace CeleryMisfortune.DataAccess.Migrations
 
                     b.Property<DateTime?>("CreateTime")
                         .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsAlive")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(255)")
@@ -189,8 +239,34 @@ namespace CeleryMisfortune.DataAccess.Migrations
                     b.Property<DateTime?>("CreateTime")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("CurrentLife")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Energy")
+                        .HasColumnType("int");
+
                     b.Property<string>("FK_PlayerGuId")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Gold")
+                        .HasColumnType("int");
+
+                    b.Property<int>("LevelExp")
+                        .HasColumnType("int");
+
+                    b.Property<string>("LifeRemark")
+                        .HasColumnType("nvarchar(255)")
+                        .HasMaxLength(255);
+
+                    b.Property<int>("MaxLifeTime")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Money")
+                        .HasColumnType("int");
+
+                    b.Property<string>("StateLevel")
+                        .HasColumnType("nvarchar(255)")
+                        .HasMaxLength(255);
 
                     b.Property<string>("UpdateBy")
                         .HasColumnType("nvarchar(50)")

@@ -41,5 +41,8 @@ namespace KnifeZ.CelestialMisfortune.Player
         [Display(Name = "门派")]
         public int Sect { get; set; }
 
+        [Display(Name = "是否陨落")]
+        public bool IsAlive { get; set; }
+
     }
 }

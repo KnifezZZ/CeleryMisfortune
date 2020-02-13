@@ -14,7 +14,6 @@
     <Folder Include="World\" />
     <Folder Include="Skill\" />
     <Folder Include="Npc\" />
-    <Folder Include="Resource\" />
   </ItemGroup>
 </Project>
 

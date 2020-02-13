@@ -8,6 +8,11 @@
     <CopyRefAssembliesToPublishDirectory>true</CopyRefAssembliesToPublishDirectory>
 </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>true</Optimize>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+
   <ItemGroup>
     <Content Remove="wwwroot\fore-end\package-lock.json" />
   </ItemGroup>
@@ -28,6 +33,8 @@
     <ProjectReference Include="..\CeleryMisfortune.ViewModel\CeleryMisfortune.ViewModel.csproj" />
     <ProjectReference Include="..\KnifeZ.SignalRKit\KnifeZ.SignalRKit.csproj" />
  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
 </Project>
 
 
