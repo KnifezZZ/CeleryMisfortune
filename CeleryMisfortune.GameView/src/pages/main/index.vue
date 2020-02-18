@@ -34,25 +34,16 @@
         <i class="iconfont cm-shuxing kz-red"></i>
         <a-tooltip title="~~" :getPopupContainer="getPopupContainer">基本信息</a-tooltip>
       </a-divider>
-      <a-col :span="8" :md="12" :xl="6" :xxl="4">
-        <span>门派</span>
-        <span>[无门无派]</span>
-      </a-col>
-      <a-col :span="16" :md="12" :xl="6" :xxl="4">
-        <span>出身</span>
-        <span>[{{this.playerInfo.Infos.BirthPlace}}]</span>
-      </a-col>
-      <a-col :span="8" :md="12" :xl="6" :xxl="4">
-        <span>神识</span>
-        <span>[100]</span>
-      </a-col>
-      <a-col :span="8" :md="12" :xl="6" :xxl="4">
-        <span>气血</span>
-        <span>[100]</span>
-      </a-col>
-      <a-col :span="8" :md="12" :xl="6" :xxl="4">
-        <span>丹毒</span>
-        <span>[0]</span>
+      <a-col
+        v-for="item in this.playerInfo.Attributes"
+        :key="item.ID"
+        :span="8"
+        :md="12"
+        :xl="6"
+        :xxl="4"
+      >
+        <span>{{item.AttrName}}</span>
+        <span>{{item.AttrValue}}</span>
       </a-col>
     </a-row>
     <a-row :gutter="24">

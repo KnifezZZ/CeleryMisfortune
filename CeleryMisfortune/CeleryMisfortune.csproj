@@ -31,6 +31,7 @@
    <ProjectReference Include="..\CeleryMisfortune.Model\CeleryMisfortune.Model.csproj" />
     <ProjectReference Include="..\CeleryMisfortune.DataAccess\CeleryMisfortune.DataAccess.csproj" />
     <ProjectReference Include="..\CeleryMisfortune.ViewModel\CeleryMisfortune.ViewModel.csproj" />
+    <ProjectReference Include="..\KnifeZ.GameEngine\KnifeZ.GameEngine.csproj" />
     <ProjectReference Include="..\KnifeZ.SignalRKit\KnifeZ.SignalRKit.csproj" />
  </ItemGroup>
 

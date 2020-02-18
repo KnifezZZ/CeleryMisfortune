@@ -16,12 +16,19 @@ export const Delete = (id) => {
 export const Search = (payload) => {
   return ajax.post('/api/PlayerInfo/Search', payload)
 }
+
 export const GetPlayerSpecialInfo = (payload) => {
   return ajax.post('/api/PlayerSpecial/Search', payload)
 }
+
 export const GetPlayerInfoById = (id) => {
   return ajax.get('/api/PlayerInfo/' + id)
 }
+
 export const GetPlayerUnitInfoById = (id) => {
   return ajax.get('/api/PlayerInfo/GetUnitInfo/' + id)
+}
+
+export const CreatedPlayer = (payload) => {
+  return ajax.post('/api/PlayerInfo/CreatedNewPlayer', payload)
 }

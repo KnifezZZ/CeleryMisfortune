@@ -1,0 +1,11 @@
+E:\GitSource\CeleryMisfortune\KnifeZ.GameEngine\bin\Debug\netcoreapp3.1\KnifeZ.GameEngine.deps.json
+E:\GitSource\CeleryMisfortune\KnifeZ.GameEngine\bin\Debug\netcoreapp3.1\KnifeZ.GameEngine.dll
+E:\GitSource\CeleryMisfortune\KnifeZ.GameEngine\bin\Debug\netcoreapp3.1\KnifeZ.GameEngine.pdb
+E:\GitSource\CeleryMisfortune\KnifeZ.GameEngine\bin\Debug\netcoreapp3.1\CeleryMisfortune.Model.dll
+E:\GitSource\CeleryMisfortune\KnifeZ.GameEngine\bin\Debug\netcoreapp3.1\CeleryMisfortune.Model.pdb
+E:\GitSource\CeleryMisfortune\KnifeZ.GameEngine\obj\Debug\netcoreapp3.1\KnifeZ.GameEngine.csprojAssemblyReference.cache
+E:\GitSource\CeleryMisfortune\KnifeZ.GameEngine\obj\Debug\netcoreapp3.1\KnifeZ.GameEngine.AssemblyInfoInputs.cache
+E:\GitSource\CeleryMisfortune\KnifeZ.GameEngine\obj\Debug\netcoreapp3.1\KnifeZ.GameEngine.AssemblyInfo.cs
+E:\GitSource\CeleryMisfortune\KnifeZ.GameEngine\obj\Debug\netcoreapp3.1\KnifeZ.GameEngine.csproj.CopyComplete
+E:\GitSource\CeleryMisfortune\KnifeZ.GameEngine\obj\Debug\netcoreapp3.1\KnifeZ.GameEngine.dll
+E:\GitSource\CeleryMisfortune\KnifeZ.GameEngine\obj\Debug\netcoreapp3.1\KnifeZ.GameEngine.pdb

@@ -1,0 +1,1229 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace KnifeZ.GameEngine
+{
+    /// <summary>
+    /// 字典池
+    /// </summary>
+    internal class DictPool
+    {
+        #region 姓名池
+
+
+        private static List<string> _SurnamePool;
+        /// <summary>
+        /// test
+        /// </summary>
+        public static List<string> SurnamePool
+        {
+            get
+            {
+                if (_SurnamePool == null)
+                {
+                    _SurnamePool = new List<string>();
+                    #region 姓氏列表-poolStrN
+                    string poolStrN = @"赵
+钱
+孙
+李
+周
+吴
+郑
+王
+冯
+陈
+褚
+卫
+蒋
+沈
+韩
+杨
+朱
+秦
+尤
+许
+何
+吕
+施
+张
+孔
+曹
+严
+华
+金
+魏
+陶
+姜
+戚
+谢
+邹
+喻
+柏
+水
+窦
+章
+云
+苏
+潘
+葛
+奚
+范
+彭
+郎
+鲁
+韦
+昌
+马
+苗
+凤
+花
+方
+俞
+任
+袁
+柳
+酆
+鲍
+史
+唐
+费
+廉
+岑
+薛
+雷
+贺
+倪
+汤
+滕
+殷
+罗
+毕
+郝
+邬
+安
+常
+乐
+于
+时
+傅
+皮
+卞
+齐
+康
+伍
+余
+元
+卜
+顾
+孟
+平
+黄
+和
+穆
+萧
+尹
+姚
+邵
+舒
+汪
+祁
+毛
+禹
+狄
+米
+贝
+明
+臧
+计
+伏
+成
+戴
+谈
+宋
+茅
+庞
+熊
+纪
+屈
+项
+祝
+董
+杜
+阮
+蓝
+闵
+席
+季
+麻
+强
+贾
+路
+娄
+危
+江
+童
+颜
+郭
+梅
+盛
+林
+刁
+钟
+徐
+邱
+骆
+高
+夏
+蔡
+田
+樊
+胡
+凌
+霍
+虞
+万
+支
+柯
+咎
+管
+卢
+莫
+经
+房
+裘
+缪
+干
+解
+应
+宗
+宣
+丁
+贲
+邓
+郁
+单
+杭
+洪
+包
+诸
+左
+石
+崔
+吉
+钮
+龚
+程
+嵇
+邢
+滑
+裴
+陆
+荣
+翁
+荀
+羊
+於
+惠
+甄 
+加
+封
+芮
+羿
+储
+靳
+汲
+邴
+糜
+松
+井
+段
+富
+巫
+乌
+焦
+巴
+弓
+牧
+隗
+山
+谷
+车
+侯
+宓
+蓬
+全
+郗
+班
+仰
+秋
+仲
+伊
+宫
+宁
+仇
+栾
+暴
+甘
+钭
+厉
+戎
+祖
+武
+符
+刘
+詹
+束
+龙
+叶
+幸
+司
+韶
+郜
+黎
+蓟
+薄
+印
+宿
+白
+怀
+蒲
+台
+从
+鄂
+索
+咸
+籍
+赖
+卓
+蔺
+屠
+蒙
+池
+乔
+阴
+胥
+能
+苍
+双
+闻
+莘
+党
+翟
+谭
+贡
+劳
+逄
+姬
+申
+扶
+堵
+冉
+宰
+郦
+雍
+璩
+桑
+桂
+濮
+牛
+寿
+通
+边
+扈
+燕
+冀
+郏
+浦
+尚
+农
+温
+别
+庄
+晏
+柴
+瞿
+阎
+充
+慕
+连
+茹
+习
+宦
+艾
+鱼
+容
+向 
+古
+易
+慎
+戈
+廖
+庚
+终
+暨
+居
+衡
+步
+都
+耿
+满
+弘
+匡
+国
+文
+寇
+广
+禄
+阙
+东
+殳
+沃
+利
+蔚
+越
+夔
+隆
+师
+巩
+厍
+聂
+晁
+勾
+敖
+融
+冷
+訾
+辛
+阚 
+那
+简
+饶
+空
+曾
+毋 
+沙
+乜 
+养 
+鞠
+须
+丰
+巢
+关
+蒯 
+相
+查
+后
+红 
+游
+竺
+权 
+逯
+盖 
+益
+桓
+公
+晋
+楚
+法
+汝
+鄢 
+涂
+钦
+缑
+亢
+况
+有
+商
+牟
+佘
+佴
+伯
+赏
+墨
+哈
+谯
+笪 
+年
+爱
+阳 
+佟
+琴
+言
+福
+百
+家 
+姓
+续
+岳
+帅 
+第五
+梁丘
+左丘
+东门
+百里
+东郭
+南门
+呼延
+万俟
+南宫
+段干
+西门
+司马
+上官
+欧阳
+夏侯
+诸葛
+闻人
+东方
+赫连
+皇甫
+尉迟
+公羊
+澹台
+公冶
+宗政
+濮阳
+淳于
+仲孙
+太叔
+申屠
+公孙
+乐正
+轩辕
+令狐
+钟离
+闾丘
+长孙 
+慕容
+鲜于
+宇文
+司徒
+司空
+亓官
+司寇
+子车
+颛孙
+端木
+巫马
+公西
+漆雕
+壤驷
+公良
+夹谷
+宰父
+微生
+羊舌";
+                    #endregion
+
+                    string[] arry = poolStrN.Split('\n');
+
+                    foreach (var item in arry)
+                    {
+                        _SurnamePool.Add(item);
+                    }
+                }
+                return _SurnamePool;
+            }
+        }
+
+
+        private static List<string> _SingleNamePool;
+        /// <summary>
+        /// 单字名
+        /// </summary>
+        public static List<string> SingleNamePool
+        {
+            get
+            {
+                if (_SingleNamePool == null)
+                {
+                    _SingleNamePool = new List<string>();
+                    #region SignleName 
+                    string poolStr = @"敏
+伟
+勇
+军
+斌
+静
+丽
+涛
+芳
+杰
+萍
+强
+俊
+明
+燕
+磊
+玲
+华
+平
+鹏
+健
+波
+红
+丹
+辉
+超
+艳
+莉
+刚
+娟
+峰
+婷
+亮
+洁
+颖
+琳
+英
+慧
+飞
+霞
+浩
+凯
+宇
+毅
+林
+佳
+云
+莹
+娜
+晶
+洋
+文
+鑫
+欣
+琴
+宁
+琼
+兵
+青
+琦
+翔
+彬
+锋
+阳
+璐
+旭
+蕾
+剑
+虹
+蓉
+建
+倩
+梅
+宏
+威
+博
+君
+力
+龙
+晨
+薇
+雪
+琪
+欢
+荣
+江
+炜
+成
+庆
+冰
+东
+帆
+雷
+楠
+锐
+进
+海
+凡
+巍
+维
+迪
+媛
+玮
+杨
+群
+瑛
+悦
+春
+瑶
+婧
+兰
+茜
+松
+爽
+立
+瑜
+睿
+晖
+聪
+帅
+瑾
+骏
+雯
+晓
+昊
+勤
+新
+瑞
+岩
+星
+忠
+志
+怡
+坤
+康
+航
+利
+畅
+坚
+雄
+智
+萌
+哲
+岚
+洪
+捷
+珊
+恒
+靖
+清
+扬
+昕
+乐
+武
+玉
+诚
+菲
+锦
+凤
+珍
+晔
+妍
+璇
+胜
+菁
+科
+芬
+露
+越
+彤
+曦
+义
+良
+鸣
+芸
+方
+月
+铭
+光
+震
+冬
+源
+政
+虎
+莎
+彪
+蓓
+钢
+凌
+奇
+卫
+彦
+烨
+可
+黎
+川
+淼
+惠
+祥
+然
+三";
+                    #endregion
+                    string[] arry = poolStr.Split('\n');
+                    foreach (var item in arry)
+                    {
+                        _SingleNamePool.Add(item);
+                    }
+                }
+                return _SingleNamePool;
+            }
+        }
+        private static List<string> _DoubleOneNamePool;
+        /// <summary>
+        /// 双字名1
+        /// </summary>
+        public static List<string> DoubleOneNamePool
+        {
+            get
+            {
+                if (_DoubleOneNamePool == null)
+                {
+                    _DoubleOneNamePool = new List<string>();
+                    #region DoubleName 
+                    string poolStr = @"建
+小
+晓
+文
+志
+国
+玉
+丽
+永
+海
+春
+金
+明
+新
+德
+秀
+红
+亚
+伟
+雪
+俊
+桂
+爱
+美
+世
+正
+庆
+学
+家
+立
+淑
+振
+云
+华
+光
+惠
+兴
+天
+长
+艳
+慧
+利
+宏
+佳
+瑞
+凤
+荣
+秋
+继
+嘉
+卫
+燕
+思
+维
+少
+福
+忠
+宝
+子
+成
+月
+洪
+东
+一
+泽
+林
+大
+素
+旭
+宇
+智
+锦
+冬
+玲
+雅
+伯
+翠
+传
+启
+剑
+安
+树
+良
+中
+梦
+广
+昌
+元
+万
+清
+静
+友
+宗
+兆
+丹
+克
+彩
+绍
+喜
+远
+朝
+敏
+培
+胜
+祖
+先
+菊
+士
+向
+有
+连
+军
+健
+巧
+耀
+莉
+英
+方
+和
+仁
+孝
+梅
+汉
+兰
+松
+水
+江
+益
+开
+景
+运
+贵
+祥
+青
+芳
+碧
+婷
+龙
+鹏
+自
+顺
+双
+书
+生
+义
+跃
+银
+佩
+雨
+保
+贤
+仲
+鸿
+浩
+加
+定
+炳
+飞
+锡
+柏
+发
+超
+道
+怀
+进
+其
+富
+平
+全
+阳
+吉
+茂
+彦
+诗
+洁
+润
+承
+治
+焕
+如
+君
+增
+善
+希
+根
+应
+勇
+宜
+守
+会
+凯
+育
+湘
+凌
+本
+敬
+博
+延
+乐
+三";
+                    #endregion
+                    string[] arry = poolStr.Split('\n');
+                    foreach (var item in arry)
+                    {
+                        _DoubleOneNamePool.Add(item);
+                    }
+                }
+                return _DoubleOneNamePool;
+            }
+        }
+        private static List<string> _DoubleTwoNamePool;
+        /// <summary>
+        /// 双字名2
+        /// </summary>
+        public static List<string> DoubleTwoNamePool
+        {
+            get
+            {
+                if (_DoubleTwoNamePool == null)
+                {
+                    _DoubleTwoNamePool = new List<string>();
+                    #region SignleName 
+                    string poolStr = @"华
+平
+明
+英
+军
+林
+萍
+芳
+玲
+红
+生
+霞
+梅
+文
+荣
+珍
+兰
+娟
+峰
+琴
+云
+辉
+东
+龙
+敏
+伟
+强
+丽
+春
+杰
+燕
+民
+君
+波
+国
+芬
+清
+祥
+斌
+婷
+飞
+良
+忠
+新
+凤
+锋
+成
+勇
+刚
+玉
+元
+宇
+海
+兵
+安
+庆
+涛
+鹏
+亮
+青
+阳
+艳
+松
+江
+莲
+娜
+兴
+光
+德
+武
+香
+俊
+秀
+慧
+雄
+才
+宏
+群
+琼
+胜
+超
+彬
+莉
+中
+山
+富
+花
+宁
+利
+贵
+福
+发
+义
+蓉
+喜
+娥
+昌
+仁
+志
+全
+宝
+权
+美
+琳
+建
+金
+贤
+星
+丹
+根
+和
+珠
+康
+菊
+琪
+坤
+泉
+秋
+静
+佳
+顺
+源
+珊
+达
+欣
+如
+莹
+章
+浩
+勤
+芹
+容
+友
+芝
+豪
+洁
+鑫
+惠
+洪
+旺
+虎
+远
+妮
+森
+妹
+南
+雯
+奇
+健
+卿
+虹
+娇
+媛
+怡
+铭
+川
+进
+博
+智
+来
+琦
+学
+聪
+洋
+乐
+年
+翔
+然
+栋
+凯
+颖
+鸣
+丰
+瑞
+奎
+立
+堂
+威
+雪
+鸿
+晶
+桂
+凡
+娣
+先
+洲
+毅
+雅
+月
+旭
+田
+晖
+方
+恒
+亚
+泽
+风
+银
+高
+贞
+九
+薇";
+                    #endregion
+                    string[] arry = poolStr.Split('\n');
+                    foreach (var item in arry)
+                    {
+                        _DoubleTwoNamePool.Add(item);
+                    }
+                }
+                return _DoubleTwoNamePool;
+            }
+        }
+        #endregion
+
+        #region Sect门派称谓
+        private static List<string> _SectSuffPool;
+        /// <summary>
+        /// 门派后缀
+        /// </summary>
+        public static List<string> SectSuffPool
+        {
+            get
+            {
+                if (_SectSuffPool == null)
+                {
+                    _SectSuffPool = new List<string>();
+                    string poolStr = @"宗、教、宫、派、阁、门、府、帮、观、会、盟";
+                    string[] arry = poolStr.Split(',');
+                    foreach (var item in arry)
+                    {
+                        _SectSuffPool.Add(item);
+                    }
+                }
+                return _SectSuffPool;
+            }
+        }
+        #endregion
+
+    }
+
+}

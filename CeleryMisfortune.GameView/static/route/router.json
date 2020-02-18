@@ -1,14 +1,50 @@
 [
   {
+    "path": "/player",
+    "name": "player",
+    "title": "角色",
+    "component": "Main",
+    "meta": {
+      "icon": "user"
+    }
+  },
+  {
+    "path": "/special",
+    "name": "special",
+    "title": "背包",
+    "component": "Main",
+    "meta": {
+      "icon": "gift"
+    }
+  },
+  {
+    "path": "/special",
+    "name": "special",
+    "title": "奇遇",
+    "component": "Main",
+    "meta": {
+      "icon": "gift"
+    }
+  },
+  {
     "path": "/",
     "name": "home",
-    "title": "首页",
+    "title": "Dev",
     "component": "Main",
     "meta": {
       "hideInMenu": false,
       "icon": "desktop"
     },
     "children": [
+      {
+        "path": "/player/created",
+        "component": "player/created",
+        "name": "player-created",
+        "title": "人物创建",
+        "meta": {
+          "icon": "appstore"
+        }
+      },
       {
         "path": "/",
         "name": "index",
@@ -37,34 +73,5 @@
         }
       }
     ]
-  },
-  {
-    "path": "/player",
-    "name": "player",
-    "title": "角色",
-    "component": "Main",
-    "meta": {
-      "icon": "user"
-    },
-    "children": [
-      {
-        "path": "created",
-        "component": "player/created",
-        "name": "menu-manage",
-        "title": "人物创建",
-        "meta": {
-          "icon": "appstore"
-        }
-      }
-    ]
-  },
-  {
-    "path": "/special",
-    "name": "special",
-    "title": "奇遇",
-    "component": "Main",
-    "meta": {
-      "icon": "gift"
-    }
   }
 ]
